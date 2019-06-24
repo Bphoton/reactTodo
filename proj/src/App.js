@@ -1,14 +1,22 @@
-import React from 'react';
-import {BrowserRouter} from 'react-router-dom'
+import React, {Component} from 'react';
+import {BrowserRouter, Switch, Route} from 'react-router-dom'
+import Navbar from './components/layout/Navbar'
+import Dashboard  from './components/dashboard/Dashboard'
+// continue https://www.youtube.com/watch?v=BRQLXTa0I94&list=PL4cUxeGkcC9iWstfXntcj8f-dFZ4UtlN3&index=6
+class App extends Component {
+  render (){
+    return (
+      <BrowserRouter>
+        <div className="App">
+          <Navbar />
+          <Switch>
+            <Route path='/' component={Dashboard} />
+          </Switch>
 
-function App() {
-  return (
-    <BrowserRouter>
-      <div className="App">
-        <h1>Thirsty</h1>
-      </div>
-    </BrowserRouter>
-  );
+        </div>
+      </BrowserRouter>
+    )
+  }
 }
 
 export default App;
