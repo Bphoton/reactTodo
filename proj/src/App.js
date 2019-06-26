@@ -21,7 +21,6 @@ class App extends Component {
             <Route path='/signup' component={SignUp} />
             <Route path='/create' component={CreateProject} />
           </Switch>
-
         </div>
       </BrowserRouter>
     )
